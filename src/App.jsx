@@ -43,7 +43,7 @@ function getRoute(routeUrl) {
   return route ?? notFound;
 }
 
-const title = 'App';
+const title = 'TCC';
 
 function setTitle(pageTitle) {
   document.title = `${pageTitle} - ${title}`;
