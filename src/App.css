@@ -11,6 +11,10 @@ body {
 
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -154,7 +158,7 @@ h3 a:hover {
 }
 
 .likeBtn {
-  padding: 10px 20px 10px 10px; 
+  padding: 10px 20px 10px 10px;
   background-color: #ff3f81;
   border: none;
   color: white;
@@ -163,7 +167,7 @@ h3 a:hover {
   display: flex;
 }
 
-.liked{
+.liked {
   margin-right: 5px;
   width: 15px;
 }
@@ -273,7 +277,7 @@ h3 a:hover {
   justify-content: center;
 }
 
-.post-btn img{
+.post-btn img {
   width: 25px;
 }
 
@@ -318,11 +322,12 @@ h3 a:hover {
   padding: 8px 12px;
 }
 
-.nav a:hover, .nav a.selected {
+.nav a:hover,
+.nav a.selected {
   background-color: #555;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
 
   .main {
     flex-direction: column;
@@ -343,10 +348,11 @@ h3 a:hover {
   .post-grid {
     grid-template-columns: 1fr;
   }
-   .nav {
+
+  .nav {
     display: none;
     flex-direction: column;
-    position: absolute; 
+    position: absolute;
     top: 60px;
     left: 0;
     right: 0;
@@ -358,7 +364,7 @@ h3 a:hover {
   .nav.open {
     display: flex;
     padding-block: 25px;
-    max-width: 91.9%; 
+    max-width: 91.9%;
     margin: 0 auto;
   }
 
