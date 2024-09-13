@@ -267,35 +267,46 @@ function LikeBtn() {
 
 function Home() {
   return (
-    <div>
+    <div className="home-section">
       <h2>Welcome to Our Blog!</h2>
       <p>
         Hey there! 👋 We're thrilled to have you here. This is not just another blog; it's a cozy little corner of the internet where we share thoughts, stories, and things that fascinate us. Grab a cup of coffee (or tea, no judgment here) and stay a while!
       </p>
       <p>
-        Feel free to explore our content, whether you're into tech, lifestyle, or just here to see what all the fuss is about. Got questions or thoughts? Hit us up on the <a href="#/contact">Contact</a> page!
+        Feel free to explore our content, whether you're into tech, lifestyle, or just here to see what all the fuss is about. Got questions or thoughts? Hit us up on the <strong><a href="#/contact">Contact</a></strong> page!
       </p>
-
+      <h3>What to Expect</h3>
+      <p>
+        On this blog, we dive deep into topics that range from the latest trends in technology to personal stories and life hacks. We believe in creating a community where curiosity thrives and learning never stops. Whether you’re looking to up your coding skills or just want to unwind with some light reading, we've got you covered.
+      </p>
+      <h3>Join the Conversation</h3>
+      <p>
+        We’re more than just readers and writers here—we're a community. Your thoughts, feedback, and ideas are what make this space so special. So don’t be shy! Comment on our posts, share your ideas, and let’s grow together. Welcome to the family!
+      </p>
     </div>
   );
 }
 
+
 function About() {
   return (
-    <div>
+    <div className="about-section">
       <h2>Who We Are</h2>
       <p>
-        We're just a bunch of passionate individuals who believe in the magic of words, tech, and everything in between. Our goal? To make your time here worth every second. Whether we're talking about coding tips, life hacks, or deep dives into obscure topics—you're in for a treat.
+        We're just a bunch of passionate individuals who believe in the magic of words, tech, and everything in between.
+        Our goal? To make your time here worth every second. Whether we're talking about coding tips, life hacks, or deep dives into obscure topics—you're in for a treat.
       </p>
+
       <h3>Our Mission</h3>
       <p>
         Our mission is simple: to create a space where curiosity meets creativity. We're here to inspire, inform, and maybe even make you chuckle now and then.
       </p>
+
       <h3>Meet the Crew</h3>
-      <ul>
-        <li><strong>John Doe</strong> - CEO & Founder. The big boss, but also the one who brings in donuts every Friday. 🍩</li>
-        <li><strong>Jane Smith</strong> - Lead Developer. The coding ninja. If it's broken, she’ll fix it. If it's not broken, she’ll make it better.</li>
-        <li><strong>Emily Davis</strong> - UX/UI Designer. The one who makes everything look pretty and works like a charm.</li>
+      <ul className="crew-list">
+        <li><strong>Sudenur Taştekin</strong> - CEO & Founder. The big boss, but also the one who brings in donuts every Friday. 🍩</li>
+        <li><strong>Arda Toraman</strong> - Lead Developer. The coding ninja. If it's broken, she’ll fix it. If it's not broken, she’ll make it better.</li>
+        <li><strong>Sıla Kara</strong> - UX/UI Designer. The one who makes everything look pretty and works like a charm.</li>
       </ul>
     </div>
   );
@@ -303,8 +314,7 @@ function About() {
 
 function Contact() {
   return (
-
-    <div>
+    <div className="contact-section">
       <h2>Let's Get in Touch!</h2>
       <p>If you have any questions, ideas, or just want to chat, we’re all ears! Seriously, we’d love to hear from you.</p>
 
@@ -320,19 +330,21 @@ function Contact() {
 
       <h3>Share Your Thoughts with Us</h3>
       <p>
-        Got a blog post idea? Or maybe you've already written something that you think would be a perfect fit for our audience? We'd love to feature your voice on our blog! Submit your blog post idea or the full post below, and let's make something awesome together.
+        Got a blog post idea? Or maybe you've already written something that you think would be a perfect fit for our audience?
+        We'd love to feature your voice on our blog! Submit your blog post idea or the full post below, and let's make something awesome together.
       </p>
-      <form>
-        <div>
-          <label>Name:</label>
+
+      <form className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />
         </div>
-        <div>
-          <label>Email:</label>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
           <input type="email" id="email" name="email" required />
         </div>
-        <div>
-          <label>Your Blog Post Idea:</label>
+        <div className="form-group">
+          <label htmlFor="postIdea">Your Blog Post Idea:</label>
           <textarea id="postIdea" name="postIdea" placeholder="Tell us about your idea or share a part of your blog post..." required></textarea>
         </div>
         <button type="submit">Submit Your Idea</button>
@@ -340,6 +352,7 @@ function Contact() {
     </div>
   );
 }
+
 
 function Blog() {
   const { postId, setPostId } = useContext(CommentsContext);
